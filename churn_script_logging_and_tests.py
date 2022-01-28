@@ -1,4 +1,7 @@
 '''
+Created by: Alex Fernandes Mansano
+Creation date: 01/28/2022
+
 this module implements unit tests for churn_library.py
 '''
 

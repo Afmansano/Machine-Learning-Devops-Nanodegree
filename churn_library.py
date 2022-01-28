@@ -1,6 +1,9 @@
 # library doc string
 
 '''
+Created by: Alex Fernandes Mansano
+Creation date: 01/28/2022
+
 this library implements functions to import the data, perform 
 an exploratory data analysis, train a randon forest and logistic 
 regression model, and also show and save their performance
@@ -169,7 +172,8 @@ def classification_report_image(y_train,
              None
     '''
     # Random Forest
-    plt.rc('figure', figsize=(10, 20))
+    plt.figure(figsize=(10,7))
+    plt.rc('figure', figsize=(10, 7))
     plt.text(0.01, 1.25, str('Random Forest Train'),
              {'fontsize': 10}, fontproperties='monospace')
     plt.text(0.01, 0.05, str(classification_report(y_test, y_test_preds_rf)),
@@ -183,7 +187,8 @@ def classification_report_image(y_train,
     plt.savefig('./images/results/random_forest.png')
 
     # Logistic Regression
-    plt.rc('figure', figsize=(10, 20))
+    plt.figure(figsize=(10,7))
+    plt.rc('figure', figsize=(10, 7))
     plt.text(0.01, 1.25, str('Logistic Regression Train'),
              {'fontsize': 10}, fontproperties='monospace')
     plt.text(0.01, 0.05, str(classification_report(y_train, y_train_preds_lr)),
@@ -215,7 +220,7 @@ def feature_importance_plot(model, X_data, output_pth):
     names = [X_data.columns[i] for i in indices]
 
     # Create plot
-    plt.figure(figsize=(20, 5))
+    plt.figure(figsize=(20, 15))
 
     # Create plot title
     plt.title("Feature Importance")

@@ -15,6 +15,16 @@ Also, as part of Machine Learning DevOps Nanodegree, it shalls to implement codi
 ## How to run this code?
 <ol>
   <li>Clone this repository</li>
+  <li>
+    Create the following folders if they don't exist:
+    <ul>
+      <li>data</li>
+      <li>images/eda</li>
+      <li>images/results</li>
+      <li>logs</li>
+      <li>models</li>
+    </ul>
+  </li>
   <li>Create a new conda environment</li>
   <li>Install autopep8, and pylint auto-formatter by running 'pip install autopep8, pylint' on terminal</li>
   <li>Run 'pylint churn_library.py' and 'pylint churn_script_logging_and_tests.py' to check the pylint scores</li>

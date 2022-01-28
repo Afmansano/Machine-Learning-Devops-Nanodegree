@@ -139,8 +139,7 @@ def perform_feature_engineering(df, response=None):
 
     if response:
         X.columns = [column_name + '_' + response
-                        for column_name in keep_cols]
-        
+                     for column_name in keep_cols]
 
     # train test split
     X_train, X_test, y_train, y_test = train_test_split(
@@ -274,8 +273,8 @@ def train_models(X_train, X_test, y_train, y_test):
     # Compute ROC curve
     plt.figure(figsize=(15, 8))
     axis = plt.gca()
-    plot_roc_curve(lrc, X_test, y_test, ax=axis, alpha=0.8)                          
-    plot_roc_curve(cv_rfc.best_estimator_, X_test, y_test, ax=axis, alpha=0.8)       
+    plot_roc_curve(lrc, X_test, y_test, ax=axis, alpha=0.8)
+    plot_roc_curve(cv_rfc.best_estimator_, X_test, y_test, ax=axis, alpha=0.8)
     plt.savefig(fname='./images/results/roc_curve.png')
 
     classification_report_image(y_train,

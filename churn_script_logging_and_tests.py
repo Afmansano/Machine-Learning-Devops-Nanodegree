@@ -97,7 +97,7 @@ def test_encoder_helper(encoder_helper):
             df=df,
             category_lst=cat_columns)
         # Data should have changed
-        assert df_encoded.columns.equals(df.columns)  is True
+        assert df_encoded.columns.equals(df.columns) is True
         logging.info(
             "SUCCESS encoder_helper: dataset columns has not changed \
                 for response=None")
@@ -108,7 +108,6 @@ def test_encoder_helper(encoder_helper):
             "ERROR encoder_helper: dataset columns should not have \
                  changed for response=None")
         raise err
-
 
 
 def test_perform_feature_engineering(perform_feature_engineering):
@@ -130,9 +129,6 @@ def test_perform_feature_engineering(perform_feature_engineering):
     try:
         _, X_test, _, _ = perform_feature_engineering(df=df_encoded,
                                                       response='Churn')
-
-        # Churn column must exists
-        assert 'Churn' in df.columns
 
         # X_test size should be >= 30%
         assert (X_test.shape[0] >= df.shape[0] * 0.3) is True
